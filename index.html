@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vid.AI - منصة إنشاء الفيديوهات بالذكاء الاصطناعي</title>
+    <link rel="icon" href="logo.png" type="image/png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            direction: rtl;
+            text-align: right;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+        .title {
+            font-size: 24px;
+            color: #333;
+            font-weight: bold;
+        }
+        .lang-switch {
+            padding: 10px;
+            border: none;
+            background: #007bff;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .site-image {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+        p {
+            font-size: 18px;
+            color: #666;
+            margin: 10px 0;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        .info-sections {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            width: 80%;
+            margin: 40px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .info-box {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+            background: #e9ecef;
+            margin: 10px;
+            border-radius: 10px;
+        }
+        .info-box h2 {
+            color: #333;
+        }
+    </style>
+    <script>
+        function toggleLanguage() {
+            let htmlTag = document.documentElement;
+            if (htmlTag.lang === "ar") {
+                location.href = "?lang=en";
+            } else {
+                location.href = "?lang=ar";
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            let urlParams = new URLSearchParams(window.location.search);
+            let lang = urlParams.get("lang");
+            let htmlTag = document.documentElement;
+            let title = document.querySelector('.title');
+            let button = document.querySelector('.lang-switch');
+
+            if (lang === "en") {
+                htmlTag.lang = "en";
+                htmlTag.dir = "ltr";
+                title.textContent = "Vid.AI - AI Video Creation Platform";
+                button.textContent = "العربية";
+                document.body.innerHTML = document.body.innerHTML.replace(/منصة إنشاء الفيديوهات بالذكاء الاصطناعي/g, "AI Video Creation Platform");
+                document.body.innerHTML = document.body.innerHTML.replace(/ابدأ الآن/g, "Get Started");
+                document.body.innerHTML = document.body.innerHTML.replace(/تسجيل الدخول/g, "Login");
+                document.body.innerHTML = document.body.innerHTML.replace(/من نحن/g, "About Us");
+                document.body.innerHTML = document.body.innerHTML.replace(/هدفنا/g, "Our Goal");
+                document.body.innerHTML = document.body.innerHTML.replace(/طريقة العمل/g, "How It Works");
+                document.body.innerHTML = document.body.innerHTML.replace(/ميزاتنا/g, "Features");
+                document.body.innerHTML = document.body.innerHTML.replace(/جميع الحقوق محفوظة/g, "All rights reserved");
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="header">
+        <img class="logo" src="logo.png" alt="Vid.AI Logo">
+        <div class="title">Vid.AI - منصة إنشاء الفيديوهات بالذكاء الاصطناعي</div>
+        <button class="lang-switch" onclick="toggleLanguage()">English</button>
+    </div>
+    <div class="container">
+        <img class="site-image" src="site-image.jpg" alt="صورة توضيحية للموقع">
+        <p>منصة متقدمة لإنشاء الفيديوهات باستخدام الذكاء الاصطناعي، تدعم جميع اللغات وتسهل عليك إنتاج محتوى احترافي بسرعة وسهولة.</p>
+        <p>قم بإنشاء مقاطع فيديو مذهلة دون الحاجة إلى مهارات تقنية!</p>
+        <div class="buttons">
+            <a href="login.html" class="button">ابدأ الآن</a>
+            <a href="login.html" class="button">تسجيل الدخول</a>
+        </div>
+    </div>
+    <div class="footer">
+        &copy; 2025 Vid.AI - جميع الحقوق محفوظة
+    </div>
+</body>
+</html>
